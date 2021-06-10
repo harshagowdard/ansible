@@ -19,7 +19,7 @@
   tasks:
     - name: Print Variable
       debug:
-        msg: URL = {{ URL }}
+        msg: URL == {{ URL }}
 
 - name: Demo on variables from user input
   hosts: all
@@ -30,4 +30,11 @@
   tasks:
     - name: Print Variable
       debug:
-        msg: URL = {{ URL }}
+        msg: URL == {{ URL }}
+
+- name: Demo on variables from inventory
+  hosts: all
+  vars_prompt:
+    - name: Print Variable
+      debug:
+        msg: URL == {{ URL }}
