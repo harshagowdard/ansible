@@ -55,7 +55,7 @@
 
     - name: Print out
       debug:
-        msg: Number of users logged in = {{ out.stdout }}
+        msg: Number of users logged in = {{ out.stdout }} ## If the value is not starting with variable, yet you have variable some where in the value. Then no need to quote the value.
 
     - name: Declare a variable
       set_fact:
@@ -63,4 +63,4 @@
 
     - name: Print No of users from a new var
       debug:
-        msg: "{{ NO_OF_USERS }}"
+        msg: "{{ NO_OF_USERS }}" ## if a value starts with a variable then you have quote the value
