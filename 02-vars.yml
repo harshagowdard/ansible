@@ -34,7 +34,7 @@
 
 - name: Demo on variables from inventory
   hosts: all
-  vars_prompt:
+  tasks:
     - name: Print Variable
       debug:
         msg: URL == {{ URL }}
