@@ -55,4 +55,4 @@
 
     - name: Print out
       debug:
-        msg: Number of users logged in = {{ stdout }}
+        msg: Number of users logged in = {{ out.stdout }}
