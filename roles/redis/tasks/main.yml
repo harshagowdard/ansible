@@ -4,10 +4,10 @@
     state: present
 
 - name: Install Redis
-    yum:
-      name: redis
-      state: present
-      enablerepo: "remi"
+  yum:
+    name: redis
+    state: present
+    enablerepo: "remi"
 
 - name: Update Redis Listen Address
   ansible.builtin.replace:
