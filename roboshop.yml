@@ -16,14 +16,38 @@
     - name: Load Frontend Role
       role: mongodb
 
-- name: Setup roboshop project
-  hosts: FRONTEND
+- name: Setup roboshop project -- Catalogue Component
+  hosts: CATALOGUE
+  become: yes
+  tags:
+    - catalogue
   roles:
-    - name: Load Frontend Role
-      role: frontend
+    - name: Load Catalogue Role
+      role: catalogue
 
-- name: Setup roboshop project
-  hosts: FRONTEND
+- name: Setup roboshop project -- Redis Component
+  hosts: REDIS
+  become: yes
+  tags:
+    - redis
   roles:
-    - name: Load Frontend Role
-      role: frontend
+    - name: Load Redis Role
+      role: redis
+
+- name: Setup roboshop project -- User Component
+  hosts: USER
+  become: yes
+  tags:
+    - user
+  roles:
+    - name: Load User Role
+      role: user
+
+- name: Setup roboshop project -- Redis Component
+  hosts: CART
+  become: yes
+  tags:
+    - cart
+  roles:
+    - name: Load Cart Role
+      role: cart
