@@ -12,8 +12,8 @@ redis.roboshop.internal
 mysql.roboshop.internal
 [SHIPPING]
 shipping.roboshop.internal
-[USERS]
-users.roboshop.internal
+[USER]
+user.roboshop.internal
 [RABBITMQ]
 rabbitmq.roboshop.internal
 [PAYMENT]
