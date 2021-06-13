@@ -41,7 +41,7 @@
     idempotent: yes
   loop:
     - users.js
-    - catalouge.js
+    - catalogue.js
 
 
 
