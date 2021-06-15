@@ -1,4 +1,12 @@
-- name: Setup roboshop project
+- name: Clean Known Hosts entries
+  hosts: localhost
+  tasks:
+    - name: Clear Known Hosts file
+      file:
+        path: ~/.ssh/known_hosts
+        state: absent
+
+- name: Setup roboshop project -- Frontend Component
   hosts: FRONTEND
   become: yes
   tags:
@@ -7,13 +15,14 @@
     - name: Load Frontend Role
       role: frontend
 
-- name: Setup roboshop project
+
+- name: Setup roboshop project -- MongoDB Component
   hosts: MONGODB
   become: yes
   tags:
     - mongodb
   roles:
-    - name: Load Frontend Role
+    - name: Load MongoDb Role
       role: mongodb
 
 - name: Setup roboshop project -- Catalogue Component
@@ -87,4 +96,3 @@
   roles:
     - name: Load Payment Role
       role: payment
-
