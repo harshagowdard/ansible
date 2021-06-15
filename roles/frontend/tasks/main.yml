@@ -19,8 +19,8 @@
 
 - name: Copy Nginx Roboshop Config
   copy:
-    src: roboshop.conf
-    dest: /etc/nginx/default.d/roboshop.conf
+    src: mysql-pass-reset.sql
+    dest: /etc/nginx/default.d/mysql-pass-reset.sql
 
 - name: Start Nginx
   ansible.builtin.systemd:
