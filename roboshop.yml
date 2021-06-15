@@ -71,7 +71,7 @@
       role: shipping
 
 - name: Setup roboshop project -- RabbitMQ Component
-  hosts: rabbitmq
+  hosts: RABBITMQ
   become: yes
   tags:
     - rabbitmq
